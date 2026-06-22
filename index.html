@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Concert Gala 2026 - Rhythm of Hopes. An unforgettable evening of music, unity, and hope. 19 July 2026, YMCA Hall Brickfields KL.">
+    <meta name="keywords" content="Concert Gala 2026, SDCKL, Rhythm of Hopes, Tamil music concert, Kuala Lumpur">
+    <meta name="author" content="DewX">
+    <meta property="og:title" content="CONCERT GALA 2026 — Rhythm of Hopes">
+    <meta property="og:description"
+        content="An unforgettable evening of music, unity, and hope. 19 July 2026, YMCA Hall Brickfields KL.">
+    <meta property="og:image" content="./assets/hero_fallback.png">
+    <title>CONCERT GALA 2026 — Rhythm of Hopes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════════ -->
+    <header class="site-header" id="site-header">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="./assets/Logo.png" alt="Logo" class="nav-logo-img">
+                <span class="logo-word">Concert</span>
+                <span class="logo-word accent">Gala</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#lineup" class="nav-item">Line Up</a>
+                <a href="#schedule" class="nav-item">Schedule</a>
+                <a href="#tickets" class="nav-item">Tickets</a>
+                <a href="#charity" class="nav-item">Charity</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="#tickets" class="nav-cta">Get Tickets</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <button class="drawer-close" id="drawer-close">✕</button>
+        <nav class="drawer-nav">
+            <a href="#about">About</a>
+            <a href="#lineup">Line Up</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#tickets">Tickets</a>
+            <a href="#charity">Charity</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#tickets" class="btn-primary mt-auto">Get Tickets</a>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="home" class="hero">
+
+        <!-- Cinematic Background -->
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source
+                    src="https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-raising-hands-under-stage-lights-34354-large.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="hero-tint"></div>
+            <!-- DJ Concert Lighting Effects -->
+            <div class="stage-lights dj-mode">
+                <div class="strobe-overlay"></div>
+                <div class="smoke-overlay"></div>
+
+                <!-- Fast Lasers -->
+                <div class="laser-beam laser-1"></div>
+                <div class="laser-beam laser-2"></div>
+                <div class="laser-beam laser-3"></div>
+                <div class="laser-beam laser-4"></div>
+                <div class="laser-beam laser-5"></div>
+
+                <!-- Floating Dust/Confetti Container -->
+                <div class="particles-container" id="particles-container"></div>
+
+                <div class="dj-ambient-glow"></div>
+            </div>
+        </div>
+
+        <!-- Left Sidebar Label -->
+        <aside class="hero-sidebar">
+            <div class="sidebar-line"></div>
+            <span class="sidebar-label">Event by SDCKL Co-Curriculam Students </span>
+            <div class="sidebar-line"></div>
+        </aside>
+
+        <!-- Main Hero Content -->
+        <div class="hero-center">
+
+            <!-- Organizer Tag -->
+            <div class="hero-tag">Rhythm of Hopes</div>
+
+            <!-- MASSIVE CUTOUT TITLE -->
+            <div class="hero-giant-title">
+                <div class="giant-line line-1">CONCERT GALA</div>
+                <div class="giant-line line-2">2026</div>
+            </div>
+
+            <!-- Date Line -->
+            <div class="hero-next-show">
+                <span class="show-label">Happening on</span>
+                <span class="show-date">YMCA Hall · Brickfields · 19 / 07 / 2026</span>
+            </div>
+
+            <!-- ── HERO INLINE COUNTDOWN ── -->
+            <div class="hero-countdown" id="hero-countdown">
+                <div class="hcd-block">
+                    <span class="hcd-num" id="hcd-days">00</span>
+                    <span class="hcd-label">Days</span>
+                </div>
+                <div class="hcd-colon">:</div>
+                <div class="hcd-block">
+                    <span class="hcd-num" id="hcd-hours">00</span>
+                    <span class="hcd-label">Hours</span>
+                </div>
+                <div class="hcd-colon">:</div>
+                <div class="hcd-block">
+                    <span class="hcd-num" id="hcd-minutes">00</span>
+                    <span class="hcd-label">Min</span>
+                </div>
+                <div class="hcd-colon">:</div>
+                <div class="hcd-block">
+                    <span class="hcd-num" id="hcd-seconds">00</span>
+                    <span class="hcd-label">Sec</span>
+                </div>
+            </div>
+
+            <!-- CTA Row -->
+            <div class="hero-actions">
+                <a href="#tickets" class="btn-primary">Buy Tickets</a>
+                <a href="#lineup" class="btn-ghost">View Lineup</a>
+            </div>
+
+        </div>
+
+        <!-- Bottom Ticker -->
+        <div class="hero-ticker-wrap">
+            <div class="ticker-track">
+                <span class="tick-item">★ CONCERT GALA 2026</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">RHYTHM OF HOPES</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">19 JULY 2026 · YMCA HALL BRICKFIELDS KL</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">50% NET PROFITS DONATED TO ORPHANAGE STUDENTS</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">ORGANIZED BY SDCKL CO-CURRICULUM MAY 2026</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">★ CONCERT GALA 2026</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">RHYTHM OF HOPES</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">19 JULY 2026 · YMCA HALL BRICKFIELDS KL</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">50% NET PROFITS DONATED TO ORPHANAGE STUDENTS</span>
+                <span class="tick-sep">—</span>
+                <span class="tick-item">ORGANIZED BY SDCKL CO-CURRICULUM MAY 2026</span>
+                <span class="tick-sep">—</span>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="scroll-cue" aria-label="Scroll Down">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </a>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="about" class="section about-section scroll-reveal">
+        <div class="container">
+            <div class="about-layout">
+
+                <div class="about-left">
+                    <span class="eyebrow">About The Event</span>
+                    <h2 class="display-heading">An Evening of <em>Music &amp; Hope</em></h2>
+                    <p class="body-lg">Concert Gala 2026 – Rhythm of Hopes is SDCKL's first-ever Concert Gala and Alumni
+                        Gathering, bringing together students, alumni, lecturers, parents, and the public.</p>
+                    <p class="body-md">Inspired by the elegance of a Met Gala, the event celebrates Tamil music, student
+                        talent, and community spirit while supporting charitable causes.</p>
+
+                    <div class="charity-badge">
+                        <div class="badge-icon">♥</div>
+                        <div class="badge-text">
+                            <strong>Charity Pledge</strong>
+                            <span>50% of all net profits donated to orphanage students</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <div class="stats-grid">
+                        <div class="stat-tile">
+                            <div class="stat-val"><span class="count-num" data-count="200">0</span>+</div>
+                            <div class="stat-lbl">Attendees</div>
+                        </div>
+                        <div class="stat-tile">
+                            <div class="stat-val"><span class="count-num" data-count="20">0</span>+</div>
+                            <div class="stat-lbl">Performances</div>
+                        </div>
+                        <div class="stat-tile">
+                            <div class="stat-val"><span class="count-num" data-count="1">0</span></div>
+                            <div class="stat-lbl">Charity Event</div>
+                        </div>
+                        <div class="stat-tile accent-tile">
+                            <div class="stat-val"><span class="count-num" data-count="50">0</span>%</div>
+                            <div class="stat-lbl">Donated</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LINE UP SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="lineup" class="section lineup-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Performances</span>
+                <h2 class="display-heading">The Lineup</h2>
+            </div>
+
+            <div class="lineup-grid">
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_harris.png" alt="Harris Jayaraj Tribute" class="card-img"
+                            loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Tamil Music</div>
+                        <h3 class="card-name">Harris Jayaraj Tribute</h3>
+                        <p class="card-sub">Romantic Melodies &amp; Beats</p>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_hiphop.png" alt="Hip Hop Tamizha Tribute" class="card-img"
+                            loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Indie Hip Hop</div>
+                        <h3 class="card-name">Hip Hop Tamizha Tribute</h3>
+                        <p class="card-sub">High Energy Indie &amp; Hip Hop</p>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_vijay.png" alt="Vijay Antony Tribute" class="card-img" loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Mass Anthems</div>
+                        <h3 class="card-name">Vijay Antony Tribute</h3>
+                        <p class="card-sub">Intense Anthems &amp; Grooves</p>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_dna.png" alt="DNA Hits" class="card-img" loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Blockbusters</div>
+                        <h3 class="card-name">DNA Hits</h3>
+                        <p class="card-sub">Dhanush &amp; Anirudh Blockbusters</p>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_hiphop.png" alt="STR Tribute" class="card-img" loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Retro Grooves</div>
+                        <h3 class="card-name">STR Tribute</h3>
+                        <p class="card-sub">Mass Beats &amp; Retro Grooves</p>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/hero_fallback.png" alt="Thalapathy Thiruvizha" class="card-img"
+                            loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Celebration</div>
+                        <h3 class="card-name">Thalapathy Thiruvizha</h3>
+                        <p class="card-sub">Ultimate Celebration Dance</p>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_harris.png" alt="Student Performances" class="card-img"
+                            loading="lazy">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">SDCKL Talent</div>
+                        <h3 class="card-name">Student Performances</h3>
+                        <p class="card-sub">Showcasing SDCKL Talents</p>
+                    </div>
+                </div>
+
+                <div class="artist-card special-guest-card">
+                    <div class="card-img-wrap">
+                        <img src="./assets/artist_vijay.png" alt="Special Guest" class="card-img" loading="lazy">
+                        <div class="card-gradient"></div>
+                        <div class="tbc-pill">TBC</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag">Mystery</div>
+                        <h3 class="card-name">Special Guest</h3>
+                        <p class="card-sub">Secret Reveal Soon</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SCHEDULE SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="schedule" class="section schedule-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Event Day</span>
+                <h2 class="display-heading">Schedule</h2>
+            </div>
+
+            <div class="schedule-grid">
+
+                <div class="sched-item">
+                    <div class="sched-time">2:00 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Opening Ceremony</h4>
+                        <p>Welcome address &amp; VIP introductions</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">2:15 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Harris Jayaraj Segment</h4>
+                        <p>Romantic melodies &amp; synth-pop classics</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">2:35 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Hip Hop Tamizha Segment</h4>
+                        <p>High-energy indie hip hop vibes</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">2:55 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Vijay Antony Segment</h4>
+                        <p>Power-packed anthems &amp; mass beats</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">3:15 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>DNA Segment</h4>
+                        <p>Dhanush &amp; Anirudh blockbuster hits</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">3:35 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>STR Segment</h4>
+                        <p>Retro &amp; chartbuster dance numbers</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">3:55 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Thalapathy Thiruvizha</h4>
+                        <p>Ultimate celebration dance block</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">4:20 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Student Performances</h4>
+                        <p>Live bands, solo acts &amp; group dances</p>
+                    </div>
+                </div>
+
+                <div class="sched-item highlight-item">
+                    <div class="sched-time">4:50 PM</div>
+                    <div class="sched-dot dot-glow"></div>
+                    <div class="sched-info">
+                        <h4>Special Guest Meet &amp; Greet</h4>
+                        <p>Q&amp;A on stage &amp; photopass sessions</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">5:20 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Networking &amp; Activities</h4>
+                        <p>Photobooth, wristband challenges &amp; alumni networking</p>
+                    </div>
+                </div>
+
+                <div class="sched-item">
+                    <div class="sched-time">5:50 PM</div>
+                    <div class="sched-dot"></div>
+                    <div class="sched-info">
+                        <h4>Closing Ceremony</h4>
+                        <p>Charity cheque presentation &amp; vote of thanks</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CHARITY SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="charity" class="section charity-section scroll-reveal">
+        <div class="charity-bg-img">
+            <img src="./assets/charity_hero.png" alt="Children" class="charity-photo" loading="lazy">
+            <div class="charity-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="charity-content">
+                <span class="eyebrow eyebrow-light">Charity</span>
+                <h2 class="display-heading light-heading">Music With Purpose</h2>
+                <p class="body-lg light-text">50% of all net profits will be donated to orphanage students to support
+                    their education and future opportunities.</p>
+
+                <div class="progress-wrap">
+                    <div class="progress-top">
+                        <span class="prog-lbl">Fundraising Goal</span>
+                        <span class="prog-pct" id="prog-pct">0%</span>
+                    </div>
+                    <div class="prog-bar-bg">
+                        <div class="prog-bar-fill" id="prog-fill"></div>
+                    </div>
+                    <div class="progress-bottom">
+                        <span>RM 0</span>
+                        <span>Target: RM 10,000</span>
+                    </div>
+                </div>
+
+                <div class="charity-stats-row">
+                    <div class="charity-stat"><span class="cs-val">RM 7,500</span><span class="cs-lbl">Raised So
+                            Far</span></div>
+                    <div class="charity-stat"><span class="cs-val">200+</span><span class="cs-lbl">Donors</span></div>
+                    <div class="charity-stat"><span class="cs-val">50%</span><span class="cs-lbl">Pledge Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GALLERY SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="gallery" class="section gallery-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Visuals</span>
+                <h2 class="display-heading">Gallery</h2>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="g-item tall" data-index="0">
+                    <img src="./assets/hero_fallback.png" alt="Concert Stage" loading="lazy">
+                    <div class="g-overlay"><span>✕</span></div>
+                </div>
+                <div class="g-item" data-index="1">
+                    <img src="./assets/artist_harris.png" alt="Stage Lights" loading="lazy">
+                    <div class="g-overlay"><span>✕</span></div>
+                </div>
+                <div class="g-item" data-index="2">
+                    <img src="./assets/artist_hiphop.png" alt="Performance" loading="lazy">
+                    <div class="g-overlay"><span>✕</span></div>
+                </div>
+                <div class="g-item wide" data-index="3">
+                    <img src="./assets/artist_vijay.png" alt="Crowd Energy" loading="lazy">
+                    <div class="g-overlay"><span>✕</span></div>
+                </div>
+                <div class="g-item" data-index="4">
+                    <img src="./assets/artist_dna.png" alt="DNA Performance" loading="lazy">
+                    <div class="g-overlay"><span>✕</span></div>
+                </div>
+                <div class="g-item" data-index="5">
+                    <img src="./assets/charity_hero.png" alt="Community" loading="lazy">
+                    <div class="g-overlay"><span>✕</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" id="lb-close">✕</button>
+        <button class="lb-prev" id="lb-prev">&#8249;</button>
+        <button class="lb-next" id="lb-next">&#8250;</button>
+        <div class="lb-img-wrap">
+            <img src="" alt="" id="lb-img" class="lb-img">
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         TICKETS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="tickets" class="section ticket-section scroll-reveal">
+        <div class="container">
+            <div class="ticket-layout">
+
+                <div class="ticket-left">
+                    <span class="eyebrow">Booking</span>
+                    <h2 class="display-heading">Get Your Ticket</h2>
+                    <p class="body-md">Join us for an unforgettable Met Gala-inspired evening. Every ticket you purchase
+                        contributes to supporting orphanage children.</p>
+                    <div class="coming-soon-badge">
+                        <span class="badge-dot"></span>
+                        <span>TICKETS COMING SOON</span>
+                    </div>
+                    <div class="ticket-details">
+                        <div class="td-row"><span class="td-label">Date</span><span>19 July 2026 (Sunday)</span></div>
+                        <div class="td-row"><span class="td-label">Time</span><span>2:00 PM – 6:00 PM</span></div>
+                        <div class="td-row"><span class="td-label">Venue</span><span>YMCA Hall, Brickfields, KL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ticket-right">
+                    <div class="waitlist-card">
+                        <h3>Join the Pre-Sale Waitlist</h3>
+                        <p>Be the first to know when tickets go live. Early-bird access guaranteed.</p>
+                        <form id="waitlist-form" class="wl-form">
+                            <div class="field-wrap">
+                                <label for="wl-name">Full Name</label>
+                                <input type="text" id="wl-name" placeholder="Your full name" required>
+                            </div>
+                            <div class="field-wrap">
+                                <label for="wl-email">Email</label>
+                                <input type="email" id="wl-email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="field-wrap">
+                                <label for="wl-qty">Tickets Needed</label>
+                                <select id="wl-qty">
+                                    <option value="1">1 Ticket</option>
+                                    <option value="2" selected>2 Tickets</option>
+                                    <option value="3">3 Tickets</option>
+                                    <option value="4">4+ Tickets</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary btn-full">Notify Me</button>
+                        </form>
+                        <div class="wl-success" id="wl-success">
+                            <div class="success-icon">✓</div>
+                            <h4>You're on the list!</h4>
+                            <p>We'll email you the moment tickets drop.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FAQ SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="faq" class="section faq-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Questions</span>
+                <h2 class="display-heading">FAQ</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">When and where is the event?<span class="faq-arrow">↓</span></button>
+                    <div class="faq-a">
+                        <p>Concert Gala 2026 is on Sunday, 19 July 2026 from 2:00 PM to 6:00 PM at YMCA Hall,
+                            Brickfields, Kuala Lumpur — just a short walk from KL Sentral.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the dress code?<span class="faq-arrow">↓</span></button>
+                    <div class="faq-a">
+                        <p>We encourage elegant formal, fusion formal, or traditional attire — inspired by the grandeur
+                            of the Met Gala. Dress to celebrate!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How is the charity donation managed?<span class="faq-arrow">↓</span></button>
+                    <div class="faq-a">
+                        <p>Exactly 50% of all net profits go directly to orphanage students. The cheque is presented
+                            live at the Closing Ceremony and audited by SDCKL.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">When will tickets be available?<span class="faq-arrow">↓</span></button>
+                    <div class="faq-a">
+                        <p>Tickets are coming soon! Join the pre-sale waitlist above to get early-bird pricing and
+                            priority access.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is there group or corporate booking?<span class="faq-arrow">↓</span></button>
+                    <div class="faq-a">
+                        <p>Yes! We offer custom packages and premium table arrangements for groups of 8+. Contact us
+                            directly via the section below.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="contact" class="section contact-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Connect</span>
+                <h2 class="display-heading">Get In Touch</h2>
+            </div>
+
+            <div class="contact-layout">
+
+                <div class="contact-info">
+                    <div class="ci-block">
+                        <div class="ci-icon">📍</div>
+                        <div>
+                            <h4>Venue</h4>
+                            <p>YMCA Hall, Brickfields, Kuala Lumpur</p>
+                        </div>
+                    </div>
+                    <div class="ci-block">
+                        <div class="ci-icon">✉</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:yoshini0824@sdckl.edu.my">yoshini0824@sdckl.edu.my</a></p>
+                        </div>
+                    </div>
+                    <div class="ci-block">
+                        <div class="ci-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+60194034304">+60 19-403 4304</a></p>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="#" aria-label="Facebook" class="soc-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="soc-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.8 2a3.8 3.8 0 0 0-3.8 3.8v8.4A3.8 3.8 0 0 0 7 20h10a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 17 4H7m5 3a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="TikTok" class="soc-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.01 1.7 4.09.99.98 2.33 1.55 3.73 1.67V9.7c-1.74-.05-3.41-.65-4.75-1.78-.17-.14-.26-.11-.3.12-.13 1.95-1 3.79-2.39 5.16-1.57 1.55-3.79 2.4-6.01 2.3-2.92-.12-5.61-2.09-6.66-4.83a7.4 7.4 0 0 1 .45-6.73c1.47-2.32 4.19-3.72 6.94-3.56.28.02.39-.06.39-.37v3.74c-.03.04-.08.06-.11.05-1.73-.24-3.54.49-4.39 2.05-.85 1.56-.63 3.61.54 4.96 1.18 1.35 3.19 1.79 4.82 1.05 1.51-.68 2.44-2.27 2.46-3.92V.02z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="soc-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09v1.68c0 .6-.03 1.29-.1 2.09-.06.8-.15 1.43-.28 1.9-.13.48-.41.86-.85 1.15-.43.29-1 .46-1.7.53-.7.07-1.71.1-3.03.1h-4.36c-1.32 0-2.33-.03-3.03-.1-.7-.07-1.27-.24-1.7-.53-.44-.29-.72-.67-.85-1.15-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09v-1.68c0-.6.03-1.29.1-2.09.06-.8.15-1.43.28-1.9.13-.48.41-.86.85-1.15.43-.29 1-.46 1.7-.53.7-.07 1.71-.1 3.03-.1h4.36c1.32 0 2.33.03 3.03.1.7.07 1.27.24 1.7.53.44.29.72.67.85 1.15z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map Visual -->
+                <div class="map-visual">
+                    <div class="map-canvas">
+                        <div class="map-road r-v1"></div>
+                        <div class="map-road r-v2"></div>
+                        <div class="map-road r-h1"></div>
+                        <div class="map-road r-h2"></div>
+                        <div class="map-place kl-sentral-lbl">KL Sentral</div>
+                        <div class="map-place brickfields-lbl">Brickfields</div>
+                        <div class="map-pin">
+                            <div class="pin-ring"></div>
+                            <div class="pin-core"></div>
+                            <div class="pin-label">YMCA Hall<br>Brickfields, KL</div>
+                        </div>
+                    </div>
+                    <div class="map-footer">
+                        <span>95 Jalan Padang Belia, Brickfields, 50470 KL</span>
+                        <a href="https://maps.google.com/?q=YMCA+Kuala+Lumpur" target="_blank" rel="noopener"
+                            class="btn-primary btn-sm">Get Directions</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-ticker-wrap">
+            <div class="ticker-track">
+                <span class="tick-item">CONCERT GALA 2026</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">RHYTHM OF HOPES</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">19 JULY 2026</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">YMCA HALL KL</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">CONCERT GALA 2026</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">RHYTHM OF HOPES</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">19 JULY 2026</span>
+                <span class="tick-sep">·</span>
+                <span class="tick-item">YMCA HALL KL</span>
+                <span class="tick-sep">·</span>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="fg-brand">
+                    <div class="footer-logo">Concert Gala 2026</div>
+                    <p>An unforgettable evening of Tamil music, student talent, and community hope.</p>
+                </div>
+                <div class="fg-credits">
+                    <p class="fg-lbl">Powered by</p>
+                    <p class="fg-val">PshycoLab IT</p>
+                </div>
+                <div class="fg-credits">
+                    <p class="fg-lbl">Developed by</p>
+                    <a href="http://pshycolab.com" target="_blank" rel="noopener" class="fg-dev-link">DewX ↗</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© 2026 SDCKL . All rights reserved.</p>
+                <div class="fb-links">
+                    <a href="#">Privacy</a>
+                    <span>|</span>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
