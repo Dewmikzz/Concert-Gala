@@ -163,6 +163,12 @@ img { display: block; max-width: 100%; }
     width: auto;
     object-fit: contain;
     margin-right: 8px;
+    animation: logoSpin 10s linear infinite;
+}
+
+@keyframes logoSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .nav-links {
@@ -230,6 +236,9 @@ img { display: block; max-width: 100%; }
     border-left: 1px solid rgba(255,255,255,0.06);
 }
 .mobile-drawer.open { right: 0; }
+.drawer-tickets-btn {
+    margin-top: 24px;
+}
 .drawer-close {
     position: absolute; top: 28px; right: 28px;
     color: var(--c-grey); font-size: 1.2rem;
@@ -417,6 +426,7 @@ img { display: block; max-width: 100%; }
     max-height: calc(100vh - var(--hh) - 60px);
     justify-content: center;
     gap: 0;
+    transform: translateY(-50px);
 }
 
 .hero-tag {
@@ -1497,7 +1507,10 @@ img { display: block; max-width: 100%; }
    RESPONSIVE — TABLET (≤ 1024px)
    ======================================================== */
 @media (max-width: 1024px) {
-    .hero-sidebar { display: none; }
+    .hero-sidebar {
+        display: flex;
+        left: 16px;
+    }
 
     .about-layout { grid-template-columns: 1fr; gap: 48px; }
     .contact-layout { grid-template-columns: 1fr; gap: 48px; }
@@ -1521,7 +1534,18 @@ img { display: block; max-width: 100%; }
     /* Nav */
     .nav-links { display: none; }
     .nav-cta { display: none; }
+    .nav-right { margin-left: auto; }
     .hamburger { display: flex; }
+    
+    .hero-sidebar {
+        left: 8px;
+        transform: translateY(-50%) scale(0.72);
+        transform-origin: left center;
+    }
+    
+    .hero-center {
+        transform: translateY(-65px);
+    }
 
     /* Hero */
     .giant-line {
@@ -1564,6 +1588,11 @@ img { display: block; max-width: 100%; }
     /* On small phones: 2 lines */
     .giant-line { font-size: clamp(1.8rem, 12vw, 3.2rem); }
     .display-heading { font-size: 2rem; }
+    
+    .hero-sidebar {
+        left: 4px;
+        transform: translateY(-50%) scale(0.62);
+    }
 
     .stats-grid { grid-template-columns: 1fr; }
     .lineup-grid { grid-template-columns: 1fr; }
